@@ -62,6 +62,8 @@ export const therapyAssignment = (data: Params, isCustom1?: boolean, isCustom2?:
 		case CONDITIONS.P(data):
 			return CALCULATIONS.P(data);
 		case CONDITIONS.T(data):
-			return CALCULATIONS.T(data);
+            return CALCULATIONS.T(data);
+        default:
+            throw new Error('inappropriate data');
 	}
 };
